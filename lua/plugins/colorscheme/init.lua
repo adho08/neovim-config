@@ -1,0 +1,22 @@
+require("plugins.colorscheme.cyberdream")
+require("plugins.colorscheme.poimandres")
+
+
+if _G.IS_WSL then
+	vim.cmd.colorscheme('falcon')
+elseif IS_WINDOWS then
+	vim.cmd.colorscheme('cyberdream')
+end
+
+local function enable_transparent_background()
+	vim.cmd [[
+	hi Normal guibg=NONE ctermbg=NONE
+	hi NormalNC guibg=NONE ctermbg=NONE
+	hi NvimTreeNormal guibg=NONE ctermbg=NONE
+	hi EndOfBuffer guibg=NONE ctermbg=NONE
+	hi LineNr guibg=NONE ctermbg=NONE
+	hi SignColumn guibg=NONE ctermbg=NONE
+	]]
+end
+
+vim.keymap.set("n", "<leader>tb", enable_transparent_background, {noremap = true, silent = true})
