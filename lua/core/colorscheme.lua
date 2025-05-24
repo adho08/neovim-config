@@ -1,7 +1,3 @@
-require("plugins.colorscheme.cyberdream")
-require("plugins.colorscheme.poimandres")
-
-
 if _G.IS_WSL then
 	vim.cmd.colorscheme('falcon')
 elseif IS_WINDOWS then
@@ -19,4 +15,13 @@ local function enable_transparent_background()
 	]]
 end
 
-vim.keymap.set("n", "<leader>tb", enable_transparent_background, {noremap = true, silent = true})
+-- local function enable_transparent_background()
+-- 	vim.cmd [[
+-- 	highlight Normal guibg=none
+-- 	highlight NonText guibg=none
+-- 	highlight Normal ctermbg=none
+-- 	highlight NonText ctermbg=none
+-- 	]]
+-- end
+
+vim.keymap.set("n", "<leader>tb", enable_transparent_background, {noremap=true})
