@@ -1,3 +1,3 @@
 return {
-	"vifm/vifm.vim"
+	"vifm/vifm.vim",
 }
