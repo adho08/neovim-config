@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "csv",
+  pattern = {  "latex", "tex", "markdown", "text" },
   callback = function()
-    -- Replace with the command you want
-    vim.cmd(":CsvViewToggle")
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "en_gb"
   end,
 })
