@@ -2,6 +2,7 @@ return {
 	"hat0uma/csvview.nvim",
 	---@module "csvview"
 	---@type CsvView.Options
+	vim.keymap.set('n', "<leader>csv", ":CsvViewToggle<CR>"),
 	opts = {
 		parser = { comments = { "#", "//" } },
 		keymaps = {
