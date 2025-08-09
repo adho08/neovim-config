@@ -4,6 +4,7 @@ return{
 		config = function()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
+			lspconfig.pyright.setup({})
 			-- key mappings
 			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)  -- go to definition
 			vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, opts) -- go to declaration
