@@ -2,6 +2,8 @@ if _G.IS_WSL then
 	vim.cmd.colorscheme('falcon')
 elseif IS_WINDOWS then
 	vim.cmd.colorscheme('cyberdream')
+else
+	vim.cmd.colorscheme('vague')
 end
 
 local function enable_transparent_background()
@@ -25,3 +27,4 @@ end
 -- end
 
 vim.keymap.set("n", "<leader>tb", enable_transparent_background, {noremap=true})
+enable_transparent_background()
