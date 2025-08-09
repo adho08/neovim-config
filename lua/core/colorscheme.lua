@@ -1,9 +1,13 @@
-if _G.IS_WSL then
-	vim.cmd.colorscheme('falcon')
-elseif IS_WINDOWS then
+local os_name = vim.loop.os_uname().sysname
+
+if IN_WINDOWS then -- is in windows
 	vim.cmd.colorscheme('cyberdream')
-else
+elseif IN_WSL then
+	vim.cmd.colorscheme('falcon')
+elseif IN_LINUX then
 	vim.cmd.colorscheme('vague')
+else
+	print("No colorscheme chosen")
 end
 
 local function enable_transparent_background()
